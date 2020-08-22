@@ -1,5 +1,5 @@
 import React from "react";
-import * as ROUTES from "constants/routes";
+import * as ROUTES from "utils/routes";
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,12 +7,12 @@ import {
   NavLink,
 } from "react-router-dom";
 
-/* Import Views */
+/* Views */
 import Dashboard from "components/dashboard";
 import Weather from "components/weather";
 import Library from "components/library";
 
-/* Import Icons */
+/* Icons */
 import HomeIcon from "icons/HomeIcon";
 import WeatherIcon from "icons/WeatherIcon";
 import LibraryIcon from "icons/LibraryIcon";
@@ -20,8 +20,8 @@ import LibraryIcon from "icons/LibraryIcon";
 const Navigation = () => {
   return (
     <Router>
-      <div className="flex flex-col-reverse h-full w-full bg-gray-200 lg:flex-row">
-        <div className="bg-gray-100 rounded-t shadow-2xl-top z-10 lg:p-4 lg:shadow-lg">
+      <div className="flex flex-col-reverse h-full w-full bg-gray-200 lg:flex-row ">
+        <div className="fixed lg:relative w-full bg-gray-100 rounded-t shadow-2xl-top lg:p-4 lg:shadow-lg lg:w-24 lg:h-full">
           <p className="hidden lg:block font-black text-gray-800 text-4xl text-center mb-4">
             GH
           </p>
@@ -30,7 +30,7 @@ const Navigation = () => {
               <NavLink
                 exact
                 to={ROUTES.DASHBOARD}
-                className="flex flex-col items-center justify-center text-gray-500 py-2"
+                className="flex flex-col items-center justify-center text-gray-500 py-2 hover:text-gray-800"
                 activeClassName="text-gray-800"
               >
                 <HomeIcon />
@@ -41,7 +41,7 @@ const Navigation = () => {
               <NavLink
                 exact
                 to={ROUTES.WEATHER}
-                className="flex flex-col items-center justify-center text-gray-500 py-2"
+                className="flex flex-col items-center justify-center text-gray-500 py-2 hover:text-gray-800"
                 activeClassName="text-gray-800"
               >
                 <WeatherIcon />
@@ -52,7 +52,7 @@ const Navigation = () => {
               <NavLink
                 exact
                 to={ROUTES.LIBRARY}
-                className="flex flex-col items-center justify-center text-gray-500 py-2"
+                className="flex flex-col items-center justify-center text-gray-500 py-2 hover:text-gray-800"
                 activeClassName="text-gray-800"
               >
                 <LibraryIcon />

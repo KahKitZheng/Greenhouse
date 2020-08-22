@@ -585,6 +585,18 @@ body,
   width: 100%;
 }
 
+.no-scroll {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.no-scroll::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
+}
+
 .container {
   width: 100%;
 }
@@ -11618,6 +11630,10 @@ body,
 
 .max-w-6xl {
   max-width: 72rem;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
 }
 
 .max-w-full {
@@ -29748,6 +29764,10 @@ body,
     max-width: 72rem;
   }
 
+  .sm\:max-w-7xl {
+    max-width: 80rem;
+  }
+
   .sm\:max-w-full {
     max-width: 100%;
   }
@@ -47844,6 +47864,10 @@ body,
 
   .md\:max-w-6xl {
     max-width: 72rem;
+  }
+
+  .md\:max-w-7xl {
+    max-width: 80rem;
   }
 
   .md\:max-w-full {
@@ -65944,6 +65968,10 @@ body,
     max-width: 72rem;
   }
 
+  .lg\:max-w-7xl {
+    max-width: 80rem;
+  }
+
   .lg\:max-w-full {
     max-width: 100%;
   }
@@ -84040,6 +84068,10 @@ body,
 
   .xl\:max-w-6xl {
     max-width: 72rem;
+  }
+
+  .xl\:max-w-7xl {
+    max-width: 80rem;
   }
 
   .xl\:max-w-full {
