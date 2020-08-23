@@ -35,7 +35,7 @@ const PlantDetails = () => {
 
     fetchToken();
     fetchData();
-  }, [token]);
+  }, [id, token]);
 
   return (
     <div>
