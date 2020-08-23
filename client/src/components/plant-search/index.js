@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 /* Layout components */
@@ -73,33 +74,35 @@ const PlantSearch = () => {
           ) : (
             <div className="grid gap-2 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 no-scroll">
               {plantData.map((plant) => (
-                <div
-                  key={plant.id}
-                  className="flex flex-row items-center justify-start bg-white shadow-md h-24 w-full p-2 last:mb-4"
-                >
-                  <img
-                    className="h-20 w-20 object-cover bg-gray-200"
-                    src={plant.image_url}
-                    alt=""
-                  />
-                  <div className="flex flex-col items-start pl-4">
-                    <p className="text-gray-800 md:text-lg font-medium text-lgbreak-words truncate">
-                      {plant.scientific_name}
-                    </p>
-                    <p className="text-gray-600 text-sm">
-                      <span className="hidden md:inline-block">
-                        Commonly known as&nbsp;
-                      </span>
-                      <strong>{plant.common_name}</strong>
-                    </p>
-                    <p className="text-gray-600 text-sm">
-                      <span className="hidden md:inline-block">
-                        Is a species of the&nbsp;
-                      </span>
-                      <strong>{plant.family} family</strong>
-                    </p>
+                <Link to={`/plants/${plant.slug}`} className="last:mb-4">
+                  <div
+                    key={plant.id}
+                    className="flex flex-row items-center justify-start bg-white shadow-md h-24 w-full p-2"
+                  >
+                    <img
+                      className="h-20 w-20 object-cover bg-gray-200"
+                      src={plant.image_url}
+                      alt=""
+                    />
+                    <div className="flex flex-col items-start pl-4">
+                      <p className="text-gray-800 md:text-lg font-medium text-lgbreak-words truncate">
+                        {plant.scientific_name}
+                      </p>
+                      <p className="text-gray-600 text-sm">
+                        <span className="hidden md:inline-block">
+                          Commonly known as&nbsp;
+                        </span>
+                        <strong>{plant.common_name}</strong>
+                      </p>
+                      <p className="text-gray-600 text-sm">
+                        <span className="hidden md:inline-block">
+                          Is a species of the&nbsp;
+                        </span>
+                        <strong>{plant.family} family</strong>
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           )}
