@@ -5,7 +5,7 @@ import axios from "axios";
 import Container from "components/container";
 import Loading from "components/loading";
 
-const Library = () => {
+const Plant = () => {
   const [plantData, setPlantData] = useState([]);
   const [query, setQuery] = useState("");
   const [token, setToken] = useState("");
@@ -17,7 +17,6 @@ const Library = () => {
         "Content-Type": "application/json",
       });
 
-      console.log(response.data.authToken);
       setToken(response.data.authToken);
     };
 
@@ -27,7 +26,7 @@ const Library = () => {
   const fetchData = async () => {
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     const response = await axios.get(
-      `${proxyurl}https://trefle.io/api/v1/plants/search?q=coconut`,
+      `${proxyurl}https://trefle.io/api/v1/plants/search?q=${query}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -46,11 +45,11 @@ const Library = () => {
 
   return (
     <Container>
-      <p className="font-black text-4xl text-center">Library page</p>
+      <p className="font-black text-4xl text-center">Plant page</p>
       <input type="text" value={query} onChange={handleChange} />
       <button onClick={() => fetchData()}>Click</button>
     </Container>
   );
 };
 
-export default Library;
+export default Plant;

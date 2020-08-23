@@ -10,12 +10,12 @@ import {
 /* Views */
 import Dashboard from "components/dashboard";
 import Weather from "components/weather";
-import Library from "components/library";
+import Plants from "components/plants";
 
 /* Icons */
 import HomeIcon from "icons/HomeIcon";
 import WeatherIcon from "icons/WeatherIcon";
-import LibraryIcon from "icons/LibraryIcon";
+import PlantIcon from "icons/PlantIcon";
 
 const Navigation = () => {
   return (
@@ -51,12 +51,12 @@ const Navigation = () => {
             <li className="text-sm">
               <NavLink
                 exact
-                to={ROUTES.LIBRARY}
+                to={ROUTES.PLANTS}
                 className="flex flex-col items-center justify-center text-gray-500 py-2 hover:text-gray-800"
                 activeClassName="text-gray-800"
               >
-                <LibraryIcon />
-                <span className="mt-1 lg:text-xs">Library</span>
+                <PlantIcon />
+                <span className="mt-1 lg:text-xs">Plants</span>
               </NavLink>
             </li>
           </ul>
@@ -69,7 +69,7 @@ const Navigation = () => {
           <Route exact path={ROUTES.WEATHER}>
             <Weather />
           </Route>
-          <Route exact path={ROUTES.LIBRARY}>
+          <Route exact path={ROUTES.PLANTS}>
             <Library />
           </Route>
         </Switch>
