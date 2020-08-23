@@ -74,11 +74,12 @@ const PlantSearch = () => {
           ) : (
             <div className="grid gap-2 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 no-scroll">
               {plantData.map((plant) => (
-                <Link to={`/plants/${plant.slug}`} className="last:mb-4">
-                  <div
-                    key={plant.id}
-                    className="flex flex-row items-center justify-start bg-white shadow-md h-24 w-full p-2"
-                  >
+                <Link
+                  key={plant.id}
+                  to={`/plants/${plant.slug}`}
+                  className="last:mb-4"
+                >
+                  <div className="flex flex-row items-center justify-start bg-white shadow-md h-24 w-full p-2">
                     <img
                       className="h-20 w-20 object-cover bg-gray-200"
                       src={plant.image_url}
