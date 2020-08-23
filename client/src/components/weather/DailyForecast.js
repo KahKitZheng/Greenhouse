@@ -15,7 +15,10 @@ const DailyForecast = ({ data }) => {
     <div>
       <div className="grid grid-flow-col overflow-x-auto no-scroll lg:mx-6">
         {data.map((day) => (
-          <div className="w-16 lg:w-auto mr-6 last:mr-0 font-semibold flex flex-col items-center justify-start lg:justify-center">
+          <div
+            key={day.dt}
+            className="w-16 lg:w-auto mr-6 last:mr-0 font-semibold flex flex-col items-center justify-start lg:justify-center"
+          >
             <p className="text-md text-gray-600">{convertTimestamp(day.dt)}</p>
             <img
               className="h-12 w-12"
