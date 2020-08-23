@@ -36,7 +36,9 @@ const Plants = () => {
   return (
     <Container>
       {weatherData.current === undefined || weatherData.hourly === null ? (
-        <Loading />
+        <div className="flex flex-col h-full">
+          <Loading />
+        </div>
       ) : (
         <Fragment>
           <CurrentWeather data={weatherData.current} />

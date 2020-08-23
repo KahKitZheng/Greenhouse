@@ -10,7 +10,7 @@ import {
 /* Views */
 import Dashboard from "components/dashboard";
 import Weather from "components/weather";
-import Plants from "components/plants";
+import PlantSearch from "components/plant-search";
 
 /* Icons */
 import HomeIcon from "icons/HomeIcon";
@@ -70,7 +70,7 @@ const Navigation = () => {
             <Weather />
           </Route>
           <Route exact path={ROUTES.PLANTS}>
-            <Plants />
+            <PlantSearch />
           </Route>
         </Switch>
       </div>
