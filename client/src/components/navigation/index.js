@@ -70,7 +70,7 @@ const Navigation = () => {
             <Weather />
           </Route>
           <Route exact path={ROUTES.PLANTS}>
-            <Library />
+            <Plants />
           </Route>
         </Switch>
       </div>
