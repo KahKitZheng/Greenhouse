@@ -10,8 +10,8 @@ import {
 /* Views */
 import Dashboard from "components/dashboard";
 import Weather from "components/weather";
-import PlantSearch from "components/plant-search";
-import PlantDetails from "components/plant-details";
+import PlantSearch from "components/plants/search";
+import PlantDetails from "components/plants/details";
 
 /* Icons */
 import HomeIcon from "icons/HomeIcon";

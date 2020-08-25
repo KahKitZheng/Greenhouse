@@ -9,9 +9,9 @@ import Loading from "components/layout/Loading";
 import BackArrow from "icons/BackArrow";
 
 /* Plant section components */
-import PlantInfo from "components/plant-details/Information";
-import PlantLocation from "components/plant-details/Location";
-import PlantSpecifications from "components/plant-details/Specifications";
+import PlantInfo from "components/plants/details/Information";
+import PlantLocation from "components/plants/details/Location";
+import PlantSpecifications from "components/plants/details/Specifications";
 
 const PlantDetails = () => {
   const [plant, setPlant] = useState("");
