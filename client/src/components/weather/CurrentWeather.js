@@ -25,7 +25,9 @@ const CurrentWeather = ({ data }) => {
         <p className="font-black text-6xl lg:text-7xl leading-none mt-8 lg:mt-0">
           {Math.round(temp)}°C
         </p>
-        <p className="font-medium text-gray-800 lg:text-3xl mt-4">Amsterdam</p>
+        <p className="font-medium text-gray-800 lg:text-3xl mt-4">
+          Amsterdam / {weather[0].description}
+        </p>
       </div>
 
       <Line className="lg:hidden" />
