@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -11,21 +11,7 @@ const PlantSearch = () => {
   const [query, setQuery] = useState("rose");
   const [token, setToken] = useState("");
 
-  useEffect(() => {
-    const fetchToken = async () => {
-      const response = await axios.get(`http://localhost:8080/api/auth/`, {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json",
-      });
-
-      setToken(response.data.authToken);
-    };
-
-    fetchToken();
-    fetchData();
-  }, [token]);
-
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     const PROXY_URL = "https://cors-anywhere.herokuapp.com/";
     const response = await axios.get(
       `${PROXY_URL}https://trefle.io/api/v1/plants/search?q=${query}`,
@@ -39,7 +25,21 @@ const PlantSearch = () => {
     );
 
     setPlantData(response.data.data);
-  };
+  }, [query, token]);
+
+  useEffect(() => {
+    const fetchToken = async () => {
+      const response = await axios.get(`http://localhost:8080/api/auth/`, {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+      });
+
+      setToken(response.data.authToken);
+    };
+
+    fetchToken();
+    fetchData();
+  }, [token, fetchData]);
 
   const handleChange = (event) => {
     setQuery(event.target.value);
