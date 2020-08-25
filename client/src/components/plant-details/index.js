@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import * as ROUTES from "utils/routes";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
 /* Layout components */
 import Container from "components/container";
 import Loading from "components/loading";
+import BackArrow from "icons/BackArrow";
 
 /* Plant section components */
 import PlantInfo from "components/plant-details/Information";
@@ -47,11 +49,19 @@ const PlantDetails = () => {
 
   return (
     <div className="flex flex-col h-full w-full">
-      <div className="bg-gray-900 rounded-b-xl flex flex-col items-center justify-center h-24 mb-8 lg:mb-12">
-        <h1 className="font-bold text-3xl leading-none mt-8 lg:mt-12 text-white">
-          {plant.scientific_name}
-        </h1>
-        <p className="mt-2 mb-8 text-gray-400">{plant.common_name}</p>
+      <div className="bg-gray-900 rounded-b-xl flex items-center justify-between h-24 mb-8 lg:mb-12">
+        <Link to={ROUTES.PLANTS} className=" py-4 px-6">
+          <div className="text-white">
+            <BackArrow />
+          </div>
+        </Link>
+        <div className="text-center">
+          <h1 className="font-bold text-3xl leading-none mt-8 lg:mt-12 text-white">
+            {plant.scientific_name}
+          </h1>
+          <p className="mt-2 mb-8 text-gray-400">{plant.common_name}</p>
+        </div>
+        <div></div>
       </div>
       <Container>
         <div className="flex flex-col overflow-y-auto no-scroll h-full lg:px-16">
