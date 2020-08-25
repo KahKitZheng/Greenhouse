@@ -22,31 +22,31 @@ const PlantInfo = ({ info }) => {
           <div className="grid grid-cols-2 gap-4">
             <div>
               <p className="font-bold">Author:&nbsp;</p>
-              <p>{author}</p>
+              <p>{author !== null ? author : "N/A"}</p>
             </div>
             <div>
               <p className="font-bold">Bibliography:&nbsp;</p>
-              <p>{bibliography}</p>
+              <p>{bibliography !== null ? bibliography : "N/A"}</p>
             </div>
             <div>
               <p className="font-bold">Scientific name:&nbsp;</p>
-              <p>{scientific_name}</p>
+              <p>{scientific_name !== null ? bibliography : "N/A"}</p>
             </div>
             <div>
               <p className="font-bold">Common name:&nbsp;</p>
-              <p>{common_name}</p>
+              <p>{common_name !== null ? common_name : "N/A"}</p>
             </div>
             <div>
               <p className="font-bold">Family:&nbsp;</p>
-              <p>{family}</p>
+              <p>{family !== null ? family : "N/A"}</p>
             </div>
             <div>
               <p className="font-bold">Common family name:&nbsp;</p>
-              <p>{family_common_name}</p>
+              <p>{family_common_name !== null ? family_common_name : "N/A"}</p>
             </div>
             <div>
               <p className="font-bold">Genus:&nbsp;</p>
-              <p>{genus}</p>
+              <p>{genus !== null ? genus : "N/A"}</p>
             </div>
           </div>
           <div className="mt-4 md:col-span-2">
