@@ -8,7 +8,7 @@ import Loading from "components/loading";
 
 const PlantSearch = () => {
   const [plantData, setPlantData] = useState([]);
-  const [query, setQuery] = useState("rose");
+  const [query, setQuery] = useState("aloe");
   const [token, setToken] = useState("");
 
   const fetchData = useCallback(async () => {
