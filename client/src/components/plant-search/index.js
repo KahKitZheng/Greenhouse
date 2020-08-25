@@ -93,7 +93,11 @@ const PlantSearch = () => {
                         <span className="hidden md:inline-block">
                           Commonly known as&nbsp;
                         </span>
-                        <strong>{plant.common_name}</strong>
+                        <strong>
+                          {plant.common_name === null
+                            ? "N/A"
+                            : plant.common_name}
+                        </strong>
                       </p>
                       <p className="text-gray-600 text-sm">
                         <span className="hidden md:inline-block">
