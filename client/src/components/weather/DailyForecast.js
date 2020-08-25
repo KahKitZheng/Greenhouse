@@ -13,11 +13,11 @@ const convertTimestamp = (timestamp) => {
 const DailyForecast = ({ data }) => {
   return (
     <div>
-      <div className="grid grid-flow-col overflow-x-auto no-scroll lg:mx-6">
+      <div className="grid grid-flow-col lg:flex lg:items-center lg:justify-between overflow-x-auto no-scroll lg:mx-6">
         {data.map((day) => (
           <div
             key={day.dt}
-            className="w-16 lg:w-auto mr-6 last:mr-0 font-semibold flex flex-col items-center justify-start lg:justify-center"
+            className="w-16 lg:w-24 mr-6 lg:mr-0 last:mr-0 font-semibold flex flex-col items-center justify-start lg:justify-center"
           >
             <p className="text-md text-gray-600">{convertTimestamp(day.dt)}</p>
             <img
