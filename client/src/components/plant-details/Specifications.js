@@ -20,7 +20,9 @@ const PlantSpecifications = ({ specifications }) => {
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         <div>
           <p className="font-bold">Average height:&nbsp;</p>
-          <p>{average_height !== null ? average_height.cm + " cm" : "N/A"}</p>
+          <p>
+            {average_height.cm !== null ? average_height.cm + " cm" : "N/A"}
+          </p>
         </div>
         <div>
           <p className="font-bold">Growth form:&nbsp;</p>
@@ -40,7 +42,9 @@ const PlantSpecifications = ({ specifications }) => {
         </div>
         <div>
           <p className="font-bold">Maximum height:&nbsp;</p>
-          <p>{maximum_height !== null ? maximum_height.cm + " cm" : "N/A"}</p>
+          <p>
+            {maximum_height.cm !== null ? maximum_height.cm + " cm" : "N/A"}
+          </p>
         </div>
         <div>
           <p className="font-bold">Nitrogen fixation:&nbsp;</p>
