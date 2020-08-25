@@ -1,6 +1,6 @@
 import React from "react";
 import iconPicker from "utils/iconPicker";
-import Line from "components/line";
+import Divider from "components/layout/Divider";
 
 const CurrentWeather = ({ data }) => {
   const {
@@ -30,7 +30,7 @@ const CurrentWeather = ({ data }) => {
         </p>
       </div>
 
-      <Line className="lg:hidden" />
+      <Divider className="lg:hidden" />
 
       <div>
         <ul className="grid grid-cols-2 grid-rows-3 gap-6 h-full w-full">

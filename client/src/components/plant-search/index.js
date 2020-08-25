@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 /* Layout components */
-import Container from "components/container";
-import Loading from "components/loading";
+import Container from "components/layout/Container";
+import Loading from "components/layout/Loading";
 
 const PlantSearch = () => {
   const [plantData, setPlantData] = useState([]);

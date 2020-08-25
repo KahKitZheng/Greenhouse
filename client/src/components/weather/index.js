@@ -2,9 +2,9 @@ import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
 
 /* Layout components */
-import Container from "components/container";
-import Loading from "components/loading";
-import Line from "components/line";
+import Container from "components/layout/Container";
+import Loading from "components/layout/Loading";
+import Divider from "components/layout/Divider";
 
 /* Weather components */
 import CurrentWeather from "components/weather/CurrentWeather";
@@ -42,11 +42,11 @@ const Plants = () => {
       ) : (
         <Fragment>
           <CurrentWeather data={weatherData.current} />
-          <Line />
+          <Divider />
           <HourlyForecast data={weatherData.hourly} />
-          <Line />
+          <Divider />
           <DailyForecast data={weatherData.daily} />
-          <Line />
+          <Divider />
         </Fragment>
       )}
     </Container>

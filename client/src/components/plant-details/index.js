@@ -4,8 +4,8 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
 /* Layout components */
-import Container from "components/container";
-import Loading from "components/loading";
+import Container from "components/layout/Container";
+import Loading from "components/layout/Loading";
 import BackArrow from "icons/BackArrow";
 
 /* Plant section components */
@@ -61,7 +61,7 @@ const PlantDetails = () => {
           </h1>
           <p className="mt-2 mb-8 text-gray-400">{plant.common_name}</p>
         </div>
-        <div></div>
+        <div className="py-4 px-6"></div>
       </div>
       <Container>
         <div className="flex flex-col overflow-y-auto no-scroll h-full lg:px-16">
