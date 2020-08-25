@@ -60,7 +60,7 @@ const PlantSearch = () => {
             onChange={handleChange}
           />
           <button
-            className="bg-gray-700 text-white rounded-r shadow px-3"
+            className="bg-gray-700 hover:bg-gray-600 text-white rounded-r shadow px-3"
             onClick={() => fetchData()}
           >
             Search
@@ -79,7 +79,7 @@ const PlantSearch = () => {
                   to={`/plants/${plant.slug}`}
                   className="last:mb-4"
                 >
-                  <div className="flex flex-row items-center justify-start bg-white shadow-md h-24 w-full p-2">
+                  <div className="flex flex-row items-center justify-start bg-white shadow-md h-24 w-full p-2 border-2 border-white hover:border-gray-500">
                     <img
                       className="h-20 w-20 object-cover bg-gray-200"
                       src={plant.image_url}
