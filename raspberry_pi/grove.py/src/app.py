@@ -9,9 +9,11 @@ from seeed_dht import DHT
 from grove.grove_moisture_sensor import GroveMoistureSensor
  
 from flask import Flask
+from flask_cors import CORS
 from flask_restful import Api, Resource, reqparse
 
 app = Flask(__name__)
+CORS(app)
 api = Api(app)
 
 class TempHumid(Resource):
