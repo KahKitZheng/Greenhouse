@@ -8,10 +8,10 @@ import {
 } from "react-router-dom";
 
 /* Views */
-import Dashboard from "components/dashboard";
-import Weather from "components/weather";
-import PlantSearch from "components/plants/search";
-import PlantDetails from "components/plants/details";
+import Dashboard from "components/views/dashboard";
+import Weather from "components/views/weather";
+import PlantSearch from "components/views/plants/search";
+import PlantDetails from "components/views/plants/details";
 
 /* Icons */
 import HomeIcon from "icons/HomeIcon";

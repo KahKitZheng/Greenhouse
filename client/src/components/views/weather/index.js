@@ -7,9 +7,9 @@ import Loading from "components/layout/Loading";
 import Divider from "components/layout/Divider";
 
 /* Weather components */
-import CurrentWeather from "components/weather/CurrentWeather";
-import HourlyForecast from "components/weather/HourlyForecast";
-import DailyForecast from "components/weather/DailyForecast";
+import CurrentWeather from "components/views/weather/CurrentWeather";
+import HourlyForecast from "components/views/weather/HourlyForecast";
+import DailyForecast from "components/views/weather/DailyForecast";
 
 const Plants = () => {
   const [weatherData, setWeatherData] = useState({});

@@ -5,9 +5,9 @@ import axios from "axios";
 import Container from "components/layout/Container";
 
 /* Import Dashboard components */
-import TempChart from "components/dashboard/TempChart";
-import HumidChart from "components/dashboard/HumidChart";
-import SoilLevel from "components/dashboard/SoilLevel";
+import TempChart from "components/views/dashboard/TempChart";
+import HumidChart from "components/views/dashboard/HumidChart";
+import SoilLevel from "components/views/dashboard/SoilLevel";
 
 const Dashboard = () => {
   const [temp, setTemp] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
@@ -36,7 +36,7 @@ const Dashboard = () => {
           console.log(temp);
           console.log(humid);
         });
-    }, 3000);
+    }, 10000);
 
     const fetchMoist = setInterval(() => {
       axios
@@ -47,7 +47,7 @@ const Dashboard = () => {
           console.log(moist);
           setMoist(res.data.moisture.description);
         });
-    }, 3000);
+    }, 10000);
 
     return () => {
       clearInterval(fetchMoist);
